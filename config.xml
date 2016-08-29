@@ -43,7 +43,7 @@ Carlos Palacios Macedo
 	
 
 <access origin="http://salasdeconferencias.com/inicio/" />
-<access origin="http://salasdeconferencias.com/*" launch-external="yes" />
+<access origin="http://salasdeconferencias.com/inicio/*" launch-external="yes" />
 
 
 <!-- fin agregados -->
