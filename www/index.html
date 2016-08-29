@@ -1,0 +1,174 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Salas de Conferencias Online!</title>
+	<link rel="stylesheet" href="www/divertisanti.min.css" />
+	<link rel="stylesheet" href="www/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=true"
+    ></script>
+<script>
+$( document ).on( "click", ".show-page-loading-msg", function() {
+    var $this = $( this ),
+        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+        textonly = !!$this.jqmData( "textonly" );
+        html = $this.jqmData( "html" ) || "";
+    $.mobile.loading( "show", {
+            text: msgText,
+            textVisible: textVisible,
+            theme: theme,
+            textonly: textonly,
+            html: html
+    });
+})
+.on( "click", ".hide-page-loading-msg", function() {
+    $.mobile.loading( "hide" );
+});
+</script>
+<script>
+imagenes = new Array();
+//Agrega tantas imágenes como necesites en el array
+imagenes[0] = "www/images/slide1.jpg";
+imagenes[1] = "www/images/slide2.png";
+imagenes[2] = "www/images/slide3.png";
+siguiente = 0;
+
+function CambiaImagen()
+{
+dimensiones = $("#box-imagen").width();
+$("#box-imagen img").css({left: -dimensiones+"px"}).attr("src", imagenes[siguiente]);
+$("#box-imagen img").animate({left: "+="+dimensiones});
+$("#box-imagen a").attr("href", imagenes[siguiente]);
+
+siguiente = siguiente+1;
+if (siguiente >= imagenes.length)
+{
+siguiente = 0;
+}
+//Aquí puedes colocar el tiempo para cada transición de imagen
+transicion = 3000;
+setTimeout("CambiaImagen()", transicion);
+}
+
+$(function(){
+CambiaImagen();
+});
+</script>
+<style>
+
+#box
+{
+width: 100%;
+background: black;
+padding: 0px;
+border-radius: 4px;
+}
+
+#box-imagen{
+width: 100%;
+background: black;
+overflow: hidden;
+}
+
+#box-imagen img
+{
+position: relative;
+width: 100%;
+
+}
+</style>
+<script>  
+  
+  $(document).ready(function(){ 
+        $("#content2").load("http://salasdeconferencias.com/"); 
+    });
+  
+  </script> 
+</head>
+<body>
+	<div data-role="page" id="page1" data-theme="d">
+		<div data-role="header" data-theme="d">
+			<h1><img src="www/images/logo-salas.jpg"</h1>
+	    </div>
+			<div data-role="content" data-theme="d">
+<!--¡Renta de Inflables Rockolas-->
+<div id="box">
+<div id="box-imagen">
+<img src="www/images/slide1.png">
+</div>
+</div>
+<br>
+<div data-theme="d" data-form="ui-body-d" class="ui-body ui-body-b ui-corner-all">
+<h2 align="center">Disponibles las 24 horas del día para E-Learning, teletrabajo, formación y todo aquello que necesite de reuniones OnLine!!!</h2>
+<h3 align="center">Renta de Salas de conferencias virtuales por mes
+Con capacidades para 25, 50, 100 y 250  personas.</h3>
+</div>
+</div>
+<footer data-position="fixed" data-id="pie_fijo">
+		<div data-role="navbar" data-theme="d">
+        <ul>
+        <li><a href="#page1" class="ui-btn ui-icon-home ui-btn-icon-top ui-btn-active"   data-transition="pop">INICIO</a></li>
+      <li><a href="#page2" class="ui-btn ui-icon-navigation ui-btn-icon-top" data-transition="pop">Web</a></li>
+      <li><a href="#page3" class="ui-btn ui-icon-mail ui-btn-icon-top" data-transition="pop">Contacto</a></li>
+        </ul>
+        </div></footer>
+</div>
+
+	<div data-role="page" id="page2" data-theme="d">
+		<div data-role="header" data-theme="d">
+			<h1>SalasdeConferencias.com</h1>
+		</div>
+		<div id="#content2" data-role="content" data-theme="d">
+<iframe href="http://salasdeconferencias.com/"  scrolling="auto" frameborder="0" width="100%" ></iframe>
+<br>
+</div>
+<footer data-position="fixed" data-id="pie_fijo">
+		<div data-role="navbar">
+        <ul>
+        <li><a href="#page1" class="ui-btn ui-icon-home ui-btn-icon-top" data-transition="pop">INICIO</a></li>
+      <li><a href="#page2" class="ui-btn ui-icon-navigation ui-btn-icon-top ui-btn-active" data-transition"pop">Web</a></li>
+      <li><a href="#page3" class="ui-btn ui-icon-mail ui-btn-icon-top" data-transition="pop">Contacto</a></li>
+        </ul>
+        </div></footer>
+</div>
+    <!--- Pagina de Contacto --->
+    <div data-role="page" id="page3" data-theme="d">
+<div data-role="header"    data-theme="d">
+			<h1>Contáctenos</h1>
+	    </div>
+  		<div data-role="content" data-theme="d">
+        <img src="www/images/logo-salas.jpg">
+
+<h3>Si desea Contratar una Sala Envíe mensaje</h3>
+<h3>Planes y Precios</h3>
+<p>Contamos con dos tipos de salas de conferencias, ambas con soporte en 15 Idiomas incluyendo Ingles y Español, uso ilimitado mensual y varias capacidades.</p>
+
+<p class="normal"><strong>Si desea más información o hacer cita para una demostración Envíe mensaje</strong></p>
+
+   <ul data-role="listview" data-inset="true" style="text-align:center" data-theme="d">
+   <li><a href ="mailto:ventas@salasdeconferencias.com.com" data-role="button"class="ui-btn ui-icon-mail ui-btn-icon-left"> Envía Email</a></li>
+   </ul>
+   <ul data-role="listview" data-inset="true"  data-theme="d">
+   <li><a href ="tel:5526665788" data-role="button" class="ui-btn ui-icon-phone ui-btn-icon-left"> Llámenos</a></li>
+   </ul>
+      <ul data-role="listview" data-inset="true"  data-theme="d">
+   <li><a href ="sms:5526665788" data-role="button" class="ui-btn ui-icon-comment ui-btn-icon-left"> Envíe Mensaje SMS</a></li>
+   </ul>
+   <h2 align="center">Salas de Conferencias</h2>
+</div>
+    <footer data-position="fixed" data-id="pie_fijo" data-theme="d">
+		<div data-role="navbar"  data-theme="d">
+        <ul>
+        <li><a href="#page1" class="ui-btn ui-icon-home ui-btn-icon-top" data-transition="pop">INICIO</a></li>
+      <li><a href="#page2" class="ui-btn ui-icon-navigation ui-btn-icon-top" data-transition"pop">Web</a></li>
+      <li><a href="#page3" class="ui-btn ui-icon-mail ui-btn-icon-top ui-btn-active" data-transition="pop">Contacto</a></li>
+        </ul>
+        </div></footer>
+	</div>
+</body>
+</html>
