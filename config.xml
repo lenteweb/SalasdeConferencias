@@ -44,7 +44,7 @@ Carlos Palacios Macedo
 <access origin="http://salasdeconferencias.com/" />
 <access origin="sms:*" launch-external="yes" />
 <access origin="geo:*" launch-external="yes" />
-<access origin="http://divertisanti.com/*" launch-external="yes" />
+<access origin="http://salasdeconferencias.com/*" launch-external="yes" />
 <access origin="http://*" launch-external="yes" />
 <access origin="https://*" launch-external="yes" />
 <access origin="*" launch-external="yes" />
