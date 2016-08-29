@@ -42,8 +42,8 @@ Carlos Palacios Macedo
 	<!-- agregados -->
 	
 
-<access origin="http://www.salasdeconferencias.com/" />
-<access origin="http://www.salasdeconferencias.com/*" launch-external="yes" />
+<access origin="http://salasdeconferencias.com/" />
+<access origin="http://salasdeconferencias.com/*" launch-external="yes" />
 
 
 <!-- fin agregados -->
