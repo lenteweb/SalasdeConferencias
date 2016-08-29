@@ -82,13 +82,6 @@ width: 100%;
 
 }
 </style>
-<script>  
-  
-  $(document).ready(function(){ 
-        $("#content2").load("http://salasdeconferencias.com/"); 
-    });
-  
-  </script> 
 </head>
 <body>
 	<div data-role="page" id="page1" data-theme="d">
@@ -113,31 +106,14 @@ Con capacidades para 25, 50, 100 y 250  personas.</h3>
 		<div data-role="navbar" data-theme="d">
         <ul>
         <li><a href="#page1" class="ui-btn ui-icon-home ui-btn-icon-top ui-btn-active"   data-transition="pop">INICIO</a></li>
-      <li><a href="#page2" class="ui-btn ui-icon-navigation ui-btn-icon-top" data-transition="pop">Web</a></li>
-      <li><a href="#page3" class="ui-btn ui-icon-mail ui-btn-icon-top" data-transition="pop">Contacto</a></li>
+      <li><a href="#page2" class="ui-btn ui-icon-mail ui-btn-icon-top" data-transition="pop">Contacto</a></li>
+      <li><a href="http://salasdeconferencias.com/" class="ui-btn ui-icon-navigation ui-btn-icon-top" data-transition="pop">Sitio Web</a></li>
         </ul>
         </div></div>
 </div>
 
-	<div data-role="page" id="page2" data-theme="d">
-		<div data-role="header" data-theme="d">
-			<h1>SalasdeConferencias.com</h1>
-		</div>
-		<div id="content2" data-role="content" data-theme="d">
-<iframe href="http://salasdeconferencias.com/"  scrolling="auto" frameborder="0" width="100%" ></iframe>
-<br>
-</div>
-<div data-role="footer" data-position="fixed" data-id="pie_fijo">
-		<div data-role="navbar">
-        <ul>
-        <li><a href="#page1" class="ui-btn ui-icon-home ui-btn-icon-top" data-transition="pop">INICIO</a></li>
-      <li><a href="#page2" class="ui-btn ui-icon-navigation ui-btn-icon-top ui-btn-active" data-transition"pop">Web</a></li>
-      <li><a href="#page3" class="ui-btn ui-icon-mail ui-btn-icon-top" data-transition="pop">Contacto</a></li>
-        </ul>
-        </div></div>
-</div>
     <!--- Pagina de Contacto --->
-    <div data-role="page" id="page3" data-theme="d">
+    <div data-role="page" id="page2" data-theme="d">
 <div data-role="header"    data-theme="d">
 			<h1>Contáctenos</h1>
 	    </div>
@@ -165,8 +141,8 @@ Con capacidades para 25, 50, 100 y 250  personas.</h3>
 		<div data-role="navbar"  data-theme="d">
         <ul>
         <li><a href="#page1" class="ui-btn ui-icon-home ui-btn-icon-top" data-transition="pop">INICIO</a></li>
-      <li><a href="#page2" class="ui-btn ui-icon-navigation ui-btn-icon-top" data-transition"pop">Web</a></li>
-      <li><a href="#page3" class="ui-btn ui-icon-mail ui-btn-icon-top ui-btn-active" data-transition="pop">Contacto</a></li>
+      <li><a href="#page2" class="ui-btn ui-icon-mail ui-btn-icon-top" data-transition"pop">Contacto</a></li>
+      <li><a href="http://salasdeconferencias.com/" class="ui-btn ui-icon-navigation ui-btn-icon-top ui-btn-active" data-transition="pop">Sitio Web</a></li>
         </ul>
         </div></div>
 	</div>
